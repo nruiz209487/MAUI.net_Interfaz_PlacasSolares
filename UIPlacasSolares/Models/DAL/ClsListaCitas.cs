@@ -16,7 +16,7 @@ namespace UIPlacasSolares.Models.DAL
     {
 
         /// <summary>
-        /// Funcion  ObtenerCitas que contiene una lista de ClsCitas
+        /// Funcion   ObtenerCitas que contiene una lista de ClsCitas
         /// </summary>
         /// <returns>Devuelve una ObservableCollection de citas  </returns>
         public static ObservableCollection<ClsCita> ObtenerCitas()
