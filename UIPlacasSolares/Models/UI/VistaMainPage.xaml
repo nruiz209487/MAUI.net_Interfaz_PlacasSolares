@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UIPlacasSolares.MainPage">
+
+    <ScrollView BackgroundColor="Beige">
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Stepper></Stepper>
+            <Label 
+               Text="Bienvenido"
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" 
+               TextColor="Black"
+               MaximumWidthRequest="250"/>
+            <Button
+                x:Name="NavLoginButton"
+                Text="Comenzar" 
+                Clicked="NavLogin"
+                HorizontalOptions="Fill"
+                BackgroundColor="LightBlue"
+                BorderColor="Black"
+                BorderWidth="1"
+                MaximumWidthRequest="250"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

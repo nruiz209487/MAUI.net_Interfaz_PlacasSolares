@@ -1,0 +1,23 @@
+﻿
+Models:
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+	UI:
+		vista Mainpage
+		vista Login 
+		   + ObservableCollection<ClsCita> listaCitas { get; }
+		vista Gps
+		vista Expediente
+		vista CasaApta 
+	--------------------------------------------
+	ENT:
+	    + ClsCitas
+		     public int NumeroCita { get; }
+			 public String Direccion { get; set; }
+		     public String Propietario { get; set; }
+
+	    + ClsCitas(NumeroCita,Direccion,Propietario)
+	--------------------------------------------
+	DAL:
+	    + ClsListaCitas
+	         + static ObservableCollection<ClsCita> ObtenerCitas() 
+	

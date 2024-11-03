@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UIPlacasSolares.Views.Citas"
+             Title="Citas">
+
+
+    <VerticalStackLayout BackgroundColor="Beige">
+
+
+        <Label 
+            Text="Citas Disponibles"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            TextColor="Black"
+            MaximumWidthRequest="250" />
+
+        <Stepper></Stepper>
+        
+        <ScrollView HeightRequest="680">
+            <ListView x:Name="listViewCitas"
+                      ItemsSource="{Binding listaCitas}"
+                      HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="10" HorizontalOptions="Center">
+                                <Label Text="Numero Cita: " FontSize="Medium" TextColor="Black" />
+                                <Label Text="{Binding NumeroCita}" FontSize="Medium" TextColor="Black" />
+                                <Label Text=" Direccion: " FontSize="Medium" TextColor="Black" />
+                                <Label Text="{Binding Direccion}" FontSize="Medium" TextColor="Black" />
+                                <Label Text=" Propietario: " FontSize="Medium" TextColor="Black" />
+                                <Label Text="{Binding Propietario}" FontSize="Medium" TextColor="Black" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollView>
+
+        <Stepper></Stepper>
+        <StackLayout Orientation="Vertical" HorizontalOptions="Fill" Margin="0,20,0,0">
+            <Button
+                x:Name="NavGpsButton"
+                Text="Ir a Gps" 
+                Clicked="NavGps"
+                HorizontalOptions="Fill"
+                BackgroundColor="LightBlue"
+                BorderColor="Black"
+                BorderWidth="1"
+                MaximumWidthRequest="250" />
+            <Stepper></Stepper>
+            <Button
+                x:Name="NavAtrasButton"
+                Text="Volver" 
+                Clicked="NavAtras"
+                HorizontalOptions="Fill"
+                BackgroundColor="LightBlue"
+                BorderColor="Black"
+                BorderWidth="1"
+                MaximumWidthRequest="250" />
+        </StackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>
