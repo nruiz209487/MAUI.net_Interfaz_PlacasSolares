@@ -18,10 +18,10 @@ namespace UIPlacasSolares.ViewModels
     /// <summary>
     /// Variable que tiene una ObservableCollection de ClsCita
     /// </summary>
-    private static ObservableCollection<ClsCita>? listaCitasVM;
+    private static ObservableCollection<ClsCita>?listaCitasVM;
 
         /// <summary>
-        /// Propiedad estática que llama la lista de citas llamando a ObtenerCitasDal().
+        /// ObservableCollection estática que llama la lista de citas llamando a ObtenerCitasDal().
         /// </summary>
         public static ObservableCollection<ClsCita> ListaCitasVM
         {

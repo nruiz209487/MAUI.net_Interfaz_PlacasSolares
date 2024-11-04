@@ -9,37 +9,85 @@
 
 
         <Label 
-            Text="Citas Disponibles"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"
-            TextColor="Black"
-            MaximumWidthRequest="250" />
-
-        <Stepper></Stepper>
+         Text="Citas"
+         FontSize="Large"
+         FontAttributes="Bold"
+         HorizontalOptions="Center"
+         TextColor="DarkSlateGray" />
         
-        <ScrollView HeightRequest="680">
+        <BoxView HeightRequest="2" BackgroundColor="Gray" Margin="0,10,0,10"/>
+        
+        <Stepper></Stepper>
+
+        <ScrollView HeightRequest="600">
+            
             <ListView x:Name="listViewCitas"
-                      ItemsSource="{Binding listaCitas}"
-                      HasUnevenRows="True">
+              ItemsSource="{Binding listaCitas}"
+              HasUnevenRows="True"
+              SeparatorVisibility="None">
+                
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Orientation="Horizontal" Padding="10" HorizontalOptions="Center">
-                                <Label Text="Numero Cita: " FontSize="Medium" TextColor="Black" />
-                                <Label Text="{Binding NumeroCita}" FontSize="Medium" TextColor="Black" />
-                                <Label Text=" Direccion: " FontSize="Medium" TextColor="Black" />
-                                <Label Text="{Binding Direccion}" FontSize="Medium" TextColor="Black" />
-                                <Label Text=" Propietario: " FontSize="Medium" TextColor="Black" />
-                                <Label Text="{Binding Propietario}" FontSize="Medium" TextColor="Black" />
-                            </StackLayout>
+                            <Frame CornerRadius="10"
+                                   Padding="10"
+                                   Margin="5"
+                                   BackgroundColor="LightGray"
+                                   BorderColor="DarkGray">
+                                
+                                <StackLayout Orientation="Vertical">
+                       
+                                    <StackLayout Orientation="Horizontal">
+                                        
+                                        <Label Text="NumeroCitaLabel" 
+                                               FontSize="Small" 
+                                               TextColor="DarkSlateGray"
+                                               FontAttributes="Bold" />
+                                        
+                                        <Label Text="{Binding NumeroCita}" 
+                                               FontSize="Small" 
+                                               TextColor="Black" 
+                                               Margin="5,0,0,0"/>
+                                        
+                                    </StackLayout>
+
+                         
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="DireccionLabel" 
+                                               FontSize="Small" 
+                                               TextColor="DarkSlateGray"
+                                               FontAttributes="Bold" />
+                                        
+                                        <Label Text="{Binding Direccion}" 
+                                               FontSize="Small" 
+                                               TextColor="Black" 
+                                               Margin="5,0,0,0"/>
+                                    </StackLayout>
+
+                      
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="PropietarioLabel" 
+                                               FontSize="Small" 
+                                               TextColor="DarkSlateGray"
+                                               FontAttributes="Bold" />
+                                        
+                                        <Label Text="{Binding Propietario}" 
+                                               FontSize="Small" 
+                                               TextColor="Black" 
+                                               Margin="5,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
         </ScrollView>
 
+
         <Stepper></Stepper>
         <StackLayout Orientation="Vertical" HorizontalOptions="Fill" Margin="0,20,0,0">
+            
             <Button
                 x:Name="NavGpsButton"
                 Text="Ir a Gps" 
@@ -49,7 +97,9 @@
                 BorderColor="Black"
                 BorderWidth="1"
                 MaximumWidthRequest="250" />
+            
             <Stepper></Stepper>
+            
             <Button
                 x:Name="NavAtrasButton"
                 Text="Volver" 

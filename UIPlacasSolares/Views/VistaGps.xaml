@@ -3,16 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="UIPlacasSolares.Views.Gps"
              Title="Gps">
+    
     <VerticalStackLayout BackgroundColor="Beige">
+        
         <Stepper></Stepper>
+        
         <Label 
-            Text="Destino:"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" 
-            TextColor="Black"
-            MaximumWidthRequest="250"
-           />
+         Text="Destino"
+         FontSize="Large"
+         FontAttributes="Bold"
+         HorizontalOptions="Center"
+         TextColor="DarkSlateGray" />
+        
+        <BoxView HeightRequest="2" BackgroundColor="Gray" Margin="0,10,0,10"/>
+        
         <Stepper></Stepper>
+        
+        <Image Source="mapa.png" MaximumHeightRequest="600" MaximumWidthRequest="1000"></Image>
+        <Stepper></Stepper>
+        
         <Button
              x:Name="NavExpedienteInformeButton"
              Text="Ir a expediente e informe" 
@@ -21,9 +30,11 @@
              BackgroundColor="LightBlue"
              BorderColor="Black"
              BorderWidth="1"
-             MaximumWidthRequest="250"
+             MaximumHeightRequest="250"
             />
-        <Stepper></Stepper>
+
+        <BoxView HeightRequest="2" WidthRequest="2" BackgroundColor="Gray" Margin="0,20,0,20"/>
+        
         <Button
             x:Name="NavAtrasButton"
             Text="Volver" 
@@ -32,7 +43,8 @@
             BackgroundColor="LightBlue"
             BorderColor="Black"
             BorderWidth="1"
-            MaximumWidthRequest="250"
+            MaximumHeightRequest="250"
             />
+        
     </VerticalStackLayout>
 </ContentPage>

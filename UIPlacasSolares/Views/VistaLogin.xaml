@@ -3,29 +3,36 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="UIPlacasSolares.Views.Login"
              Title="Login">
+    
     <VerticalStackLayout BackgroundColor="Beige" >
+        
         <Stepper></Stepper>
+        
         <Label 
-            Text="Usuario"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" 
-            TextColor="Black"
-            MaximumWidthRequest="250"/>
+                Text="Usuario"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                TextColor="Black"
+                MaximumWidthRequest="250"
+                FontAttributes="Bold"/>
+        
         <Entry BackgroundColor="LightBlue"   MaximumWidthRequest="250"> </Entry>
         
         <Stepper></Stepper>
-        
-        <Label 
-          Text="Contrasenya"
-          VerticalOptions="Center" 
-          HorizontalOptions="Center" 
-          TextColor="Black"
-          MaximumWidthRequest="250"/>
 
+        <Label 
+              Text="Contrasenya"
+              VerticalOptions="Center" 
+              HorizontalOptions="Center" 
+              TextColor="Black"
+              MaximumWidthRequest="250"
+              FontAttributes="Bold"/>
+        
         <Entry BackgroundColor="LightBlue"   MaximumWidthRequest="250"></Entry>
 
 
         <Stepper></Stepper>
+        
         <Button
                 x:Name="NavCitasButton"
                 Text="Ir a citas" 
@@ -34,9 +41,11 @@
                 BackgroundColor="LightBlue"
                 BorderColor="Black"
                 BorderWidth="1"
-              MaximumWidthRequest="250"
+                MaximumWidthRequest="250"
          />
+        
         <Stepper></Stepper>
+        
         <Button
                x:Name="NavAtrasButton"
                Text="Volver" 
@@ -47,5 +56,6 @@
                BorderWidth="1"
                MaximumWidthRequest="250"
             />
+        
     </VerticalStackLayout>
 </ContentPage>

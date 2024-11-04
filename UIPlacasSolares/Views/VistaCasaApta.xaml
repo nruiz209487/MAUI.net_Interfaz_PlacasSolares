@@ -3,33 +3,70 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="UIPlacasSolares.Views.CasaApta"
              Title="CasaApta">
-    <VerticalStackLayout BackgroundColor="Beige">
-        <Stepper></Stepper>
+    
+    <VerticalStackLayout BackgroundColor="Beige" Padding="20">
+
+
         <Label 
-            Text="Verificar si la casa es apta:"
-            VerticalOptions="Center" 
+            Text="Verificar si la casa es apta para instalación de placas"
+            FontSize="Large"
+            FontAttributes="Bold"
+            TextColor="DarkSlateGray"
             HorizontalOptions="Center"
+            />
+
+        <BoxView HeightRequest="2" BackgroundColor="Gray" Margin="0,10,0,10"/>
+
+  
+        <Label 
+            Text="Seleccione el estado de la casa:"
+            FontSize="Medium"
+            FontAttributes="Bold"
             TextColor="Black"
-            MaximumWidthRequest="250"/>
-        <Stepper></Stepper>
+            Margin="0,10,0,5" />
+
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <RadioButton 
+                Content="Apta"
+                GroupName="EstadoCasa"
+                Value="Apta"
+                FontSize="Medium"
+                TextColor="DarkGreen" />
+            
+            <RadioButton 
+                Content="No Apta"
+                GroupName="EstadoCasa"
+                Value="No Apta"
+                FontSize="Medium"
+                TextColor="DarkRed"
+                Margin="20,0,0,0" />
+            
+        </StackLayout>
+
+        <BoxView HeightRequest="2" BackgroundColor="Gray" Margin="0,20,0,20"/>
+
         <Button
-              x:Name="NavCitasButton"
-              Text="Ir a Citas" 
-              Clicked="NavCitas"
-              HorizontalOptions="Fill" BackgroundColor="LightBlue"
-              BorderColor="Black"
-              BorderWidth="1"
-              MaximumWidthRequest="250"
-            />
-        <Stepper></Stepper>
+            x:Name="NavCitasButton"
+            Text="Ir a Citas" 
+            Clicked="NavCitas"
+            BackgroundColor="LightBlue"
+            BorderColor="Black"
+            BorderWidth="1"
+            CornerRadius="10"
+            HorizontalOptions="Fill"
+            Margin="0,5,0,5" />
+
         <Button
-             x:Name="NavAtrasButton"
-             Text="Volver" 
-             Clicked="NavAtras"
-             HorizontalOptions="Fill" BackgroundColor="LightBlue"
-             BorderColor="Black"
-             BorderWidth="1"
-             MaximumWidthRequest="250"
-            />
+            x:Name="NavAtrasButton"
+            Text="Volver" 
+            Clicked="NavAtras"
+            BackgroundColor="LightBlue"
+            BorderColor="Black"
+            BorderWidth="1"
+            CornerRadius="10"
+            HorizontalOptions="Fill"
+            Margin="0,5,0,5" />
+
     </VerticalStackLayout>
 </ContentPage>

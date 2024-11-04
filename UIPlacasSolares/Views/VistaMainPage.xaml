@@ -4,16 +4,22 @@
              x:Class="UIPlacasSolares.MainPage">
 
     <ScrollView BackgroundColor="Beige">
+        
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
+            
             <Stepper></Stepper>
+            
             <Label 
-               Text="Bienvenido"
-               VerticalOptions="Center" 
-               HorizontalOptions="Center" 
-               TextColor="Black"
-               MaximumWidthRequest="250"/>
+                 Text="Bienvenido al la demo Interfaz Placas Solares"
+                 FontSize="Large"
+                 FontAttributes="Bold"
+                 HorizontalOptions="Center"
+                 TextColor="DarkSlateGray" />
+            
+            <BoxView HeightRequest="2" BackgroundColor="Gray" Margin="0,10,0,10"/>
+            
             <Button
                 x:Name="NavLoginButton"
                 Text="Comenzar" 
@@ -23,7 +29,9 @@
                 BorderColor="Black"
                 BorderWidth="1"
                 MaximumWidthRequest="250"/>
+            
         </VerticalStackLayout>
+        
     </ScrollView>
 
 </ContentPage>
