@@ -14,14 +14,14 @@ namespace UIPlacasSolares.Models.DAL
     /// </summary>
     public static class ClsListaCitas
     {
-
+        
         /// <summary>
         /// Funcion   ObtenerCitas que contiene una lista de ClsCitas
         /// </summary>
         /// <returns>Devuelve una ObservableCollection de citas  </returns>
-        public static ObservableCollection<ClsCita> ObtenerCitas()
+        public static ObservableCollection<ClsCita> ObtenerCitasDal()
         {
-            var listaCitas = new List<ClsCita> {
+            var listaCitasDal = new List<ClsCita> {
                 new ClsCita(1, "Calle Principal 123", "Juan Pérez"),
                 new ClsCita(2, "Avenida Libertad 456", "Ana Gómez"),
                 new ClsCita(3, "Calle 5 Norte 789", "Carlos Ruiz"),
@@ -44,7 +44,7 @@ namespace UIPlacasSolares.Models.DAL
                 new ClsCita(20, "Barrio San José 1500", "Ricardo Vargas")
 
             };
-            return new ObservableCollection<ClsCita>(listaCitas);
+            return new ObservableCollection<ClsCita>(listaCitasDal);
         }
 
     }

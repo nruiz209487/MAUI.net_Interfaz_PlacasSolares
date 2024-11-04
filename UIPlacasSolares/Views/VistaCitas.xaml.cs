@@ -1,19 +1,20 @@
 using System.Collections.ObjectModel;
 using UIPlacasSolares.ENT;
 using UIPlacasSolares.Models.DAL;
+using UIPlacasSolares.ViewModels;
 
 namespace UIPlacasSolares.Views;
 
 public partial class Citas : ContentPage
 {
-    public ObservableCollection<ClsCita> listaCitas { get; }
+    public ObservableCollection<ClsCita> listaCitas { get;}
     /// <summary>
     /// Pagina citas que llama a la funcion en ClsListaPersonas.ObtenerCitas() para importar la lista 
     /// </summary>
     public Citas()
     {
         InitializeComponent();
-        listaCitas = ClsListaCitas.ObtenerCitas();
+        listaCitas = CitasVM.ListaCitasVM;
         BindingContext = this;
     }
     /// <summary>

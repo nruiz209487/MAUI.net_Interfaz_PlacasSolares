@@ -63,42 +63,46 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Models\UI\VistaCasaApta.xaml.cs">
+	  <Compile Update="Views\VistaCasaApta.xaml.cs">
 	    <DependentUpon>VistaCasaApta.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Models\UI\VistaCitas.xaml.cs">
+	  <Compile Update="Views\VistaCitas.xaml.cs">
 	    <DependentUpon>VistaCitas.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Models\UI\VistaGps.xaml.cs">
+	  <Compile Update="Views\VistaGps.xaml.cs">
 	    <DependentUpon>VistaGps.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Models\UI\VistaLogin.xaml.cs">
+	  <Compile Update="Views\VistaLogin.xaml.cs">
 	    <DependentUpon>VistaLogin.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Models\UI\VistaMainPage.xaml.cs">
+	  <Compile Update="Views\VistaMainPage.xaml.cs">
 	    <DependentUpon>VistaMainPage.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Models\UI\VistaExpedienteInforme.xaml.cs">
+	  <Compile Update="Views\VistaExpedienteInforme.xaml.cs">
 	    <DependentUpon>VistaExpedienteInforme.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Models\UI\VistaCasaApta.xaml">
+	  <MauiXaml Update="Views\VistaCasaApta.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Models\UI\VistaCitas.xaml">
+	  <MauiXaml Update="Views\VistaCitas.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Models\UI\VistaExpedienteInforme.xaml">
+	  <MauiXaml Update="Views\VistaExpedienteInforme.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Models\UI\VistaGps.xaml">
+	  <MauiXaml Update="Views\VistaGps.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Models\UI\VistaLogin.xaml">
+	  <MauiXaml Update="Views\VistaLogin.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Models\BL\" />
 	</ItemGroup>
 
 </Project>
