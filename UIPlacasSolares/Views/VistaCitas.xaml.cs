@@ -9,7 +9,7 @@ public partial class Citas : ContentPage
     /// <summary>
     /// ObservableCollection de la clase ClsCita con el el metodo get
     /// </summary>
-    public ObservableCollection<ClsCita> listaCitas { get;}
+    public ObservableCollection<ClsCita> listaCitas { get; }
     /// <summary>
     /// Pagina citas que llama a la funcion en ClsListaPersonas.ObtenerCitas() para importar la lista 
     /// </summary>

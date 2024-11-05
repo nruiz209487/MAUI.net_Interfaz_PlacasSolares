@@ -15,10 +15,10 @@ namespace UIPlacasSolares.ViewModels
     /// </summary>
     internal class CitasVM
     {
-    /// <summary>
-    /// Variable que tiene una ObservableCollection de ClsCita
-    /// </summary>
-    private static ObservableCollection<ClsCita>?listaCitasVM;
+        /// <summary>
+        /// Variable que tiene una ObservableCollection de ClsCita
+        /// </summary>
+        private static ObservableCollection<ClsCita>? listaCitasVM;
 
         /// <summary>
         /// ObservableCollection estática que llama la lista de citas llamando a ObtenerCitasDal().
@@ -27,11 +27,11 @@ namespace UIPlacasSolares.ViewModels
         {
             get
             {
-                if (listaCitasVM == null) 
+                if (listaCitasVM == null)
                 {
-                    listaCitasVM = ClsListaCitas.ObtenerCitasDal(); 
+                    listaCitasVM = ClsListaCitas.ObtenerCitasDal();
                 }
-                return listaCitasVM; 
+                return listaCitasVM;
             }
         }
     }

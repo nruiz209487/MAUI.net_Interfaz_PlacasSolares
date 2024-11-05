@@ -34,7 +34,7 @@ public partial class Login : ContentPage
             }
             else { errorLoginLabel.IsVisible = true; }
         }
-     
+
 
     }
     /// <summary>

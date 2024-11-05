@@ -3,6 +3,7 @@ namespace UIPlacasSolares.Views;
 public partial class CasaApta : ContentPage
 {
     private Boolean opcionSelecionada;
+
     /// <summary>
     /// vista que muestra la pagina CasaApta
     /// </summary>
@@ -12,9 +13,9 @@ public partial class CasaApta : ContentPage
     }
     private async void OnCheckedChanged(object sender, CheckedChangedEventArgs e)
     {
-
         opcionSelecionada = e.Value;
     }
+
     /// <summary>
     /// Boton que navega a Citas
     /// </summary>
@@ -22,11 +23,13 @@ public partial class CasaApta : ContentPage
     /// <param name="e"></param>
     private async void NavCitas(object sender, EventArgs e)
     {
-        if (opcionSelecionada) { 
-        await Navigation.PushAsync(new Citas());
+        if (opcionSelecionada)
+        {
+            await Navigation.PushAsync(new Citas());
         }
-        else { errorBotonCasaApta.IsVisible=true; }
+        else { errorBotonCasaApta.IsVisible = true; }
     }
+
     /// <summary>
     /// Boton que navega a ExpedienteInforme
     /// </summary>
@@ -37,5 +40,5 @@ public partial class CasaApta : ContentPage
         await Navigation.PushAsync(new ExpedienteInforme());
     }
 
- 
+
 }

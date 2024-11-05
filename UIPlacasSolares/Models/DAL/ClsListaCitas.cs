@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UIPlacasSolares.ENT;
-using UIPlacasSolares.Views;
 
 namespace UIPlacasSolares.Models.DAL
 {
@@ -14,7 +13,7 @@ namespace UIPlacasSolares.Models.DAL
     /// </summary>
     public static class ClsListaCitas
     {
-        
+
         /// <summary>
         /// Funcion   ObtenerCitas que contiene una lista de ClsCitas
         /// </summary>

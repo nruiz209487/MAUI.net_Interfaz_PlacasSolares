@@ -1,9 +1,4 @@
 ﻿namespace UIPlacasSolares
-// Importa el espacio de nombres de la nueva página
-
-// Dentro de un evento o método
-
-
 {
     using UIPlacasSolares.Views;
     public partial class MainPage : ContentPage
