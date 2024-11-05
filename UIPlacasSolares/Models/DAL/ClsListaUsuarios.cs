@@ -13,7 +13,7 @@ namespace UIPlacasSolares.Models.DAL
         public static ObservableCollection<ClsUsuario> ObtenerListaUsuariosDal()
         {
             var listaUsuariosDal = new List<ClsUsuario> {
-                new ClsUsuario("Calle Principal 123", "Juan Pérez"),
+                new ClsUsuario("usuario", "1234"),
 
 
             };

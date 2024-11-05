@@ -1,6 +1,5 @@
 using System.Collections.ObjectModel;
 using UIPlacasSolares.ENT;
-using UIPlacasSolares.Models.DAL;
 using UIPlacasSolares.ViewModels;
 
 namespace UIPlacasSolares.Views;
@@ -25,7 +24,7 @@ public partial class Citas : ContentPage
     /// </summary>
     /// <param name="sender"></param>
     /// <param name="e"></param>
-    private async void NavGps(object sender, EventArgs e)
+    private async void OnItemTapped(object sender, ItemTappedEventArgs e)
     {
         await Navigation.PushAsync(new Gps());
     }

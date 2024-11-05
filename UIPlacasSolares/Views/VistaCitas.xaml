@@ -5,7 +5,7 @@
              Title="Citas">
 
 
-    <VerticalStackLayout BackgroundColor="Beige">
+    <VerticalStackLayout BackgroundColor="White">
 
 
         <Label 
@@ -20,12 +20,13 @@
         <Stepper></Stepper>
 
         <ScrollView HeightRequest="600">
-            
+
             <ListView x:Name="listViewCitas"
-              ItemsSource="{Binding listaCitas}"
-              HasUnevenRows="True"
-              SeparatorVisibility="None">
-                
+                      ItemsSource="{Binding listaCitas}"
+                      HasUnevenRows="True"
+                      SeparatorVisibility="None"
+                      ItemTapped="OnItemTapped">
+
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -88,17 +89,7 @@
         <Stepper></Stepper>
         <StackLayout Orientation="Vertical" HorizontalOptions="Fill" Margin="0,20,0,0">
             
-            <Button
-                x:Name="NavGpsButton"
-                Text="Ir a Gps" 
-                Clicked="NavGps"
-                HorizontalOptions="Fill"
-                BackgroundColor="LightBlue"
-                BorderColor="Black"
-                BorderWidth="1"
-                MaximumWidthRequest="250" />
-            
-            <Stepper></Stepper>
+           
             
             <Button
                 x:Name="NavAtrasButton"
@@ -108,7 +99,8 @@
                 BackgroundColor="LightBlue"
                 BorderColor="Black"
                 BorderWidth="1"
-                MaximumWidthRequest="250" />
+                MaximumWidthRequest="250" 
+                />
         </StackLayout>
 
     </VerticalStackLayout>

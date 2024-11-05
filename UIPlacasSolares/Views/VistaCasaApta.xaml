@@ -4,7 +4,7 @@
              x:Class="UIPlacasSolares.Views.CasaApta"
              Title="CasaApta">
     
-    <VerticalStackLayout BackgroundColor="Beige" Padding="20">
+    <VerticalStackLayout BackgroundColor="White" Padding="20">
 
 
         <Label 
@@ -28,24 +28,29 @@
 
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
             <RadioButton 
+                x:Name="BotonPositivo"
                 Content="Apta"
                 GroupName="EstadoCasa"
                 Value="Apta"
                 FontSize="Medium"
-                TextColor="DarkGreen" />
+                TextColor="DarkGreen"
+                CheckedChanged="OnCheckedChanged"
+                />
             
             <RadioButton 
+                x:Name="BotonNegativo"
                 Content="No Apta"
                 GroupName="EstadoCasa"
                 Value="No Apta"
                 FontSize="Medium"
                 TextColor="DarkRed"
-                Margin="20,0,0,0" />
+                Margin="20,0,0,0"
+                CheckedChanged="OnCheckedChanged"/>
             
         </StackLayout>
 
         <BoxView HeightRequest="2" BackgroundColor="Gray" Margin="0,20,0,20"/>
-
+        <Label x:Name="errorBotonCasaApta" Text="Debe selecionaruna opcion" TextColor="Red" IsVisible="False "  VerticalOptions="Center" HorizontalOptions="Center"   MaximumWidthRequest="300"   FontAttributes="Bold"  />
         <Button
             x:Name="NavCitasButton"
             Text="Ir a Citas" 
@@ -55,7 +60,9 @@
             BorderWidth="1"
             CornerRadius="10"
             HorizontalOptions="Fill"
-            Margin="0,5,0,5" />
+            Margin="0,5,0,5"
+            MaximumWidthRequest="250"
+            />
 
         <Button
             x:Name="NavAtrasButton"
@@ -66,7 +73,9 @@
             BorderWidth="1"
             CornerRadius="10"
             HorizontalOptions="Fill"
-            Margin="0,5,0,5" />
+            Margin="0,5,0,5"
+            MaximumWidthRequest="250"
+            />
 
     </VerticalStackLayout>
 </ContentPage>

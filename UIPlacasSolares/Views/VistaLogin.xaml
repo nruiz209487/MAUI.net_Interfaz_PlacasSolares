@@ -3,11 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="UIPlacasSolares.Views.Login"
              Title="Login">
-    
-    <VerticalStackLayout BackgroundColor="Beige" >
-        
+
+    <VerticalStackLayout BackgroundColor="White" >
+
         <Stepper></Stepper>
-        
+
         <Label 
                 Text="Usuario"
                 VerticalOptions="Center" 
@@ -15,9 +15,9 @@
                 TextColor="Black"
                 MaximumWidthRequest="250"
                 FontAttributes="Bold"/>
-        
-        <Entry BackgroundColor="LightBlue"   MaximumWidthRequest="250"> </Entry>
-        
+
+        <Entry x:Name="usuarioEntry"  Placeholder="Escribe tu nombre de usuario" BackgroundColor="LightBlue"   MaximumWidthRequest="250"   TextColor="Black" ></Entry>
+
         <Stepper></Stepper>
 
         <Label 
@@ -27,12 +27,12 @@
               TextColor="Black"
               MaximumWidthRequest="250"
               FontAttributes="Bold"/>
-        
-        <Entry BackgroundColor="LightBlue"   MaximumWidthRequest="250"></Entry>
 
+        <Entry x:Name="contrasenyaEntry"  Placeholder="Escribe tu contrasenya" BackgroundColor="LightBlue"   MaximumWidthRequest="250" IsPassword="True"   TextColor="Black"></Entry>
 
+        <Label x:Name="errorLoginLabel" Text="Contrasenya y\o usuario incorrecto" TextColor="Red" IsVisible="False "  VerticalOptions="Center" HorizontalOptions="Center"   MaximumWidthRequest="300"   FontAttributes="Bold"  />
         <Stepper></Stepper>
-        
+
         <Button
                 x:Name="NavCitasButton"
                 Text="Ir a citas" 
@@ -43,9 +43,9 @@
                 BorderWidth="1"
                 MaximumWidthRequest="250"
          />
-        
+
         <Stepper></Stepper>
-        
+
         <Button
                x:Name="NavAtrasButton"
                Text="Volver" 
@@ -56,6 +56,14 @@
                BorderWidth="1"
                MaximumWidthRequest="250"
             />
+        <Stepper></Stepper>
+        <Label 
+              Text="el Usuario es:usuario  la contrasenya es:1234"
+              VerticalOptions="Center" 
+              HorizontalOptions="Center" 
+              TextColor="Black"
+              MaximumWidthRequest="400"
+              FontAttributes="Bold"/>
         
     </VerticalStackLayout>
 </ContentPage>

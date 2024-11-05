@@ -3,8 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="UIPlacasSolares.Views.Gps"
              Title="Gps">
-    
-    <VerticalStackLayout BackgroundColor="Beige">
+
+    <VerticalStackLayout BackgroundColor="White">
         
         <Stepper></Stepper>
         
@@ -30,6 +30,7 @@
              BackgroundColor="LightBlue"
              BorderColor="Black"
              BorderWidth="1"
+             MaximumWidthRequest="250"
              MaximumHeightRequest="250"
             />
 
@@ -43,6 +44,7 @@
             BackgroundColor="LightBlue"
             BorderColor="Black"
             BorderWidth="1"
+            MaximumWidthRequest="250"
             MaximumHeightRequest="250"
             />
         
