@@ -11,7 +11,7 @@ public partial class CasaApta : ContentPage
     {
         InitializeComponent();
     }
-    private async void OnCheckedChanged(object sender, CheckedChangedEventArgs e)
+    private void OnCheckedChanged(object sender, CheckedChangedEventArgs e)
     {
         opcionSelecionada = e.Value;
     }
