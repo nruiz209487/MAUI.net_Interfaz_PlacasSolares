@@ -12,11 +12,10 @@ namespace UIPlacasSolares.Models.ENT
     {/// <summary>
     /// 
     /// </summary>
-        public String nombre { get;}
-        /// <summary>
-        /// 
-        /// </summary>
-        public String contrasenya { get;}
+        public String nombre {get;}
+        public String contrasenya {get;}
+
+        public ClsUsuario() { }
 
         /// <summary>
         /// 

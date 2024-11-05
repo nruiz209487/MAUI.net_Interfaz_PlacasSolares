@@ -2,32 +2,64 @@
 Models:
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 	ENT:
-	    + ClsCitas
-		     public int NumeroCita { get; }
-			 public String Direccion { get; set; }
-		     public String Propietario { get; set; }
+	    +  class ClsCitas
+		     + int NumeroCita { get; }
+			 + String Direccion { get; set; }
+		     + String Propietario { get; set; }
+			 + ClsCitas()
+			 + ClsCitas(NumeroCita,Direccion,Propietario)
 
-	    + ClsCitas(NumeroCita,Direccion,Propietario)
+	    + class ClsUsuario
+			+ String nombre {get;}
+			+ String contrasenya {get;}
+			+ ClsUsuario()
+			+ ClsUsuario(nombre,contrasenya)
+
 	--------------------------------------------
 	DAL:
-	    + ClsListaCitas
-	         + static ObservableCollection<ClsCita> ObtenerCitas() 
+	    + class ClsListaCitas
+	         + static ObservableCollection<ClsCita> ObtenerCitasDal() 
+
+		+ class ClsListaUsuarios
+	         + static ObservableCollection<ClsCita> ObtenerCitasDal() 
+    --------------------------------------------
+	BL:
+		 // no hay reglas de empresa 
+
 Views:
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 		vista Mainpage
+		     - SiguinetePagina()
+
 		vista Login 
-		   + ObservableCollection<ClsCita> listaCitas { get; }
+		     + ObservableCollection<ClsUsuario> listaUsuarios { get; }
+		     - SiguinetePagina()
+			 - VolverAtras()
+
 		vista Gps
+		    - SiguinetePagina()
+			- VolverAtras()
+
 		vista Expediente
+			- siguinetePagina()
+			- volverAtras()
+
 		vista CasaApta 
+		    - Boolean opcionSelecionada;
+		    - SiguinetePagina()
+			- VolverAtras()
+
+		vista Citas 
+		    - SiguinetePagina()
+			- VolverAtras()
+			+ ObservableCollection<ClsCita> listaCitas { get; }
 
 ViewModels:
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
-	  CitasVM
-	  - listaCitasVM ObservableCollection <ClsCita> {get}
+	  class CitasVM
+			 - static ObservableCollection<ClsCita>listaCitasVM; 
+			 +  static listaCitasVM ObservableCollection <ClsCita> {get,ObtenerCitasDal()}
 
-
-ViewModels:
---------------------------------------------------------------------------------------------------------------------------------------------------------------
-	  CitasVM
-	  - listaCitasVM ObservableCollection <ClsCita> {get}
+	  class  LoginVM
+			 - private static ObservableCollection<ClsUsuario>? listaaUsuariosVM;
+			 + listaCitasVM ObservableCollection <ClsCita> {get,ObtenerUsuarios()}

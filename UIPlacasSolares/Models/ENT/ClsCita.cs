@@ -16,6 +16,12 @@ namespace UIPlacasSolares.ENT
         public String Propietario { get; set; }
 
         /// <summary>
+        /// /Contrcutor vacio
+        /// </summary>
+        public ClsCita() { }
+
+
+        /// <summary>
         /// Constructor ClsCita con todos los parametros , comprobaciones y exepciones 
         /// </summary>
         /// <param name="NumeroCita"></param>
